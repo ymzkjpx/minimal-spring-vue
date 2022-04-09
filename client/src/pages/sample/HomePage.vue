@@ -2,14 +2,24 @@
   <h1>Home</h1>
   <ul :class="$style.links">
     <li>
-      <router-link :class="$style.link" to="/">Home</router-link>
+      <router-link
+          :class="$style.link"
+          to="/">
+        Home
+      </router-link>
+    </li>
+    <li>
+      <router-link :class="$style.link"
+          to="/hello-world"
+      >
+        HelloWorld
+      </router-link>
     </li>
     <li>
       <router-link
           :class="$style.link"
-          to="/hello-world"
-      >
-        HelloWorld
+          to="/user-list">
+        UserList
       </router-link>
     </li>
   </ul>
