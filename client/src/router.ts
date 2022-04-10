@@ -4,7 +4,7 @@ import HomePage from '@/pages/sample/HomePage.vue'
 import NotFound from '@/components/NotFound.vue'
 import UserList from '@/pages/userlist/UserList.vue'
 
-const router = createRouter({
+export const router = createRouter({
     history: createWebHashHistory(),
     routes: [
         {
@@ -29,5 +29,3 @@ const router = createRouter({
         }
     ]
 })
-
-export default router

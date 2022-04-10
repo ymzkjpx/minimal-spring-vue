@@ -1,8 +1,7 @@
 <script setup lang="ts">
-
 import {onMounted, reactive, ref} from "vue";
 import {UserListInitValue, UserListType} from "@/pages/userlist/UserListInterface";
-import axios from 'axios'
+import {axiosClient} from "@/plugins/axios";
 
 onMounted(()=>
     fetchUserList()
@@ -13,12 +12,9 @@ const userList = reactive<{value: UserListType}>({
 })
 const message = ref()
 
-axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
-axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-
 const fetchUserList = () => {
-  const url = 'http://localhost:8080/'
-  axios.get(url).then((response)=>{
+  const url = '/'
+  axiosClient.get(url).then((response)=>{
     console.log(response)
     message.value = response.data
   })

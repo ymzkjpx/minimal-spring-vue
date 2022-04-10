@@ -4,7 +4,7 @@ import {onMounted, ref} from "vue";
 
 const msg = ref("")
 onMounted(()=>{
-  msg.value = "Hi"
+  msg.value = "Hi Hello World"
 })
 </script>
 
