@@ -1,14 +1,12 @@
 <script setup lang="ts">
-import HelloWorld from '@/components/HelloWorldComponent.vue'
-import {onMounted, ref} from "vue";
+import Greeting from '@/components/GreetingComponent.vue'
+import {ref} from "vue";
 
-const msg = ref("")
-onMounted(()=>{
-  msg.value = "Hi Hello World"
-})
+const msg = ref("Hi Hello World")
 </script>
 
 <template>
-  <HelloWorld :msg="msg"/>
+  <h2>HelloWorldPage.</h2>
+  <Greeting :msg="msg"/>
 </template>
 

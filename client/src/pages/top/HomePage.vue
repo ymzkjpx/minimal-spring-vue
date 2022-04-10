@@ -1,24 +1,23 @@
 <template>
-  <h1>Home</h1>
+  <h1>Minimal Spring Vue by Vite.</h1>
   <ul :class="$style.links">
-    <li>
+    <li :class="$style.link" >
       <router-link
-          :class="$style.link"
           to="/">
         Home
       </router-link>
     </li>
-    <li>
-      <router-link :class="$style.link"
+    <li :class="$style.link">
+      <router-link
           to="/hello-world"
       >
         HelloWorld
       </router-link>
     </li>
-    <li>
+    <li :class="$style.link">
       <router-link
-          :class="$style.link"
-          to="/user-list">
+          to="/user-list"
+      >
         UserList
       </router-link>
     </li>
@@ -31,10 +30,9 @@
 }
 
 .link {
-  list-style-type: none;
   font-size: 1.25rem;
   color: forestgreen;
-  padding-top: 1.5rem;
+  padding-top: 1.5rem;;
 }
 
 .link a:hover {

@@ -1,8 +1,8 @@
 import {createRouter, createWebHashHistory} from "vue-router";
 import HelloWorldPage from '@/pages/sample/HelloWorldPage.vue'
-import HomePage from '@/pages/sample/HomePage.vue'
+import HomePage from '@/pages/top/HomePage.vue'
 import NotFound from '@/components/NotFound.vue'
-import UserList from '@/pages/userlist/UserList.vue'
+import UserListPage from '@/pages/userlist/UserListPage.vue'
 
 export const router = createRouter({
     history: createWebHashHistory(),
@@ -13,14 +13,14 @@ export const router = createRouter({
             , component: HomePage
         },
         {
-            path: '/user-list'
-            , name: 'UserList'
-            , component: UserList
-        },
-        {
             path: '/hello-world'
             , name: 'HelloWorldPage'
             , component: HelloWorldPage
+        },
+        {
+            path: '/user-list'
+            , name: 'UserList'
+            , component: UserListPage
         },
         {
             path: '/*'
